@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      - "MYSQL_DATABASE=order_management"
+      - "MYSQL_USER=user"
+      - "MYSQL_PASSWORD=user"
+      - "MYSQL_ROOT_PASSWORD=root"
+    ports:
+      - "127.0.0.1:3307:3306"
+    volumes:
+      - C:/Users/Mahmood/Downloads/order_management/data/mysql:/var/lib/mysql
+  app:
+    image: 'order_management_app:latest'
+    build: src/main/java
+    container_name: order_management_app
+    depends_on:
+      - mysql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/order_management?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=user
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+      - SERVER_PORT=8080
+    ports:
+      - "127.0.0.1:8082:8080"
