@@ -3,7 +3,7 @@ version: '3.9'
 services:
   mysql:
     image: mysql:8
-    container_name: mysql
+    container_name: database
     environment:
       - "MYSQL_DATABASE=order_management"
       - "MYSQL_USER=user"
@@ -12,7 +12,7 @@ services:
     ports:
       - "127.0.0.1:3307:3306"
     volumes:
-      - C:/Users/Mahmood/Downloads/order_management/data/mysql:/var/lib/mysql
+      - C:/Users/Mahmood/Downloads/database/order_management/data/mysql:/var/lib/mysql
   app:
     image: 'order_management_app:latest'
     build: src/main/java

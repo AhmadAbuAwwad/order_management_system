@@ -1,5 +1,4 @@
-USE order_management_systems;
-INSERT INTO roles (id, role_name) VALUES 
+INSERT INTO roles (id, role_name) VALUES
 (1, 'ROLE_USER'),
 (2, 'ROLE_ADMIN');
 
@@ -8,7 +7,7 @@ INSERT INTO users (id, date_of_birth, email, firstname, lastname, password, user
 VALUES 
 (1, '1990-01-01', 'example1@example.com', 'John', 'Doe', 'password1', 'johndoe'),
 (2, '1995-02-15', 'example2@example.com', 'Jane', 'Smith', 'password2', 'janesmith'),
-(3, '1985-07-10', 'example3@example.com', 'Michael', 'Johnson', 'password3', 'michaeljohnson');
+(3, '1985-07-10', 'example3@example.com', 'Michael', 'Johnson', 'password3', 'michaeljohnson'),
 (5, '1985-07-10', 'example4@example.com', 'Michael', 'Johnson', 'password3', 'michaeljohnson4');
 
 INSERT INTO user_roles (user_id, role_id)
