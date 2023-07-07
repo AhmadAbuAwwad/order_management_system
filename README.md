@@ -16,7 +16,9 @@ To create and run the Docker image of the application, follow these steps:
 
 Build the Docker image using the provided Dockerfile:
 To build the application, follow these steps:
+
 ```chmod 777 runner.sh```
+
 ```./runner.sh```
 
 # API Documentation
@@ -25,11 +27,11 @@ The API documentation is generated using Swagger. To access the Swagger document
 # Postman Collection
 The Postman collection for testing the APIs is available in the repository. To import the collection into Postman
 
-# Entity Relations
-![Database_ER.png](Database_ER.png)
-
 Select the downloaded Postman collection file ([order-management-system.postman_collection.json](src%2Fmain%2Fresources%2Forder-management-system.postman_collection.json)).
 The collection will be imported, and you can now use it to test the APIs.
+
+# Entity Relations
+![Database_ER.png](Database_ER.png)
 
 # Security and Authentication
 JWT for securing APIs
