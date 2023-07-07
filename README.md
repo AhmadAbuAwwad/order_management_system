@@ -1,4 +1,4 @@
-# order_management_system
+# Order Management System
 This project aims to design and implement a backend application for order management. The application will provide a set of APIs to manage various entities related to order management. This README file provides instructions on how to build the application, create and run the Docker image, and other relevant information.
 
 # Java Development Kit (JDK) version 8 or higher
